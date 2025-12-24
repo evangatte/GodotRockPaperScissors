@@ -1,0 +1,11 @@
+# Godot-specific ignores
+.godot/
+.import/
+export.cfg
+export_presets.cfg
+
+# OS/Editor files
+.DS_Store
+*.swp
+*.swo
+*~

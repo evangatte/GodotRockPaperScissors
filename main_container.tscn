@@ -1,0 +1,102 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0o53ibm64n1c"]
+
+[ext_resource type="Script" uid="uid://blno6wlove1yp" path="res://main_container.gd" id="1_q2toe"]
+
+[node name="MainContainer" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q2toe")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="ScoreDisplay" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="PlayerScoreLabel" type="Label" parent="MarginContainer/VBoxContainer/ScoreDisplay"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Player Score: "
+
+[node name="WinnerLabel" type="Label" parent="MarginContainer/VBoxContainer/ScoreDisplay"]
+layout_mode = 2
+size_flags_horizontal = 3
+horizontal_alignment = 1
+
+[node name="ComputerScoreLabel" type="Label" parent="MarginContainer/VBoxContainer/ScoreDisplay"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Computer Score:"
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="SelectionDisplay" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="PlayerSelectionLabel" type="Label" parent="MarginContainer/VBoxContainer/SelectionDisplay"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Player Selected:"
+
+[node name="ComputerSelectionLabel" type="Label" parent="MarginContainer/VBoxContainer/SelectionDisplay"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Computer Selected: "
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RockButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Rock"
+
+[node name="PaperButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Paper"
+
+[node name="ScissorsButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Scissors"
+
+[node name="RestartButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Restart"
+
+[node name="WinnersModal" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="WinnersModal"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.36495715, 0.36040366, 0.4276129, 1)
+
+[node name="WinnersModalButton" type="Button" parent="WinnersModal"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
